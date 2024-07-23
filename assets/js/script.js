@@ -32,8 +32,24 @@ function runGame(gameType) {
     }
 }
 
-function checkAnswer() {
-    // To be implemented
+
+/**
+ *Gets the operands (the numbers) and operator (plus, minus etc)
+ dirrctly from the dom, and returns the correct answer.
+ */
+
+ function checkAnswer() {
+ let operand1 = parseInt(document.getElementbyId('operand1'). innerText);
+ let operand2 = parseInt(document.getElementbyId('operand2'). innerText);
+ let operator = document.getElementbyId("operator"). innerText;
+
+ if (operator === "+") {
+    return [operand1 + operand2, "addition"];
+    } else {
+    alert(`unimplemented operator ${operator}`);
+    throw `unimplemented operator${operator}.Aborting!`;
+    }
+ 
 }
 
 function calculateCorrectAnswer() {
